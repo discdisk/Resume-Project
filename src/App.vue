@@ -1,28 +1,125 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div id="back">
+  <div id="A4paper">
+    <div id="main">
+      <div id="header">
+        <div style="font-size:30px;font-weight:bold;">JIAHAO CHEN</div>
+        <div style="float:left;">
+          <div>Email: chenjiahao0501@gmail.com</div>
+          <div>Phone Number: 080-4475-0266</div>
+          <div>Address: room 308, 3-11-1, Tokushima, 770-0901</div> 
+          <!-- room 308, 3-chōme-11-1 Nishisenbachō, Tokushima, 770-0901 -->
+          <!-- <div>Hometown: ZheJiang, China</div> -->
+        </div>
+        
+        <div style="float:right;text-align:right;">
+          <div>Github: <a style="text-decoration:none" href="https://github.com/discdisk">https://github.com/discdisk</a></div>
+          <div>Programming Languages: Python, Javascript, C, SQL</div>
+          <div>Framework: Flask, vue.js, Chainer, Keras</div>
+        </div>
+        <div style="clear: both;"></div>
+
+
+      </div>
+    
+      <Section v-for="section in sections" :section="section" :key="section.sectionTitle"/>
+    </div>
   </div>
+</div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Section from './components/Section.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Section
+  },
+  // {sectionTitle:'',items:[
+  //       {title:'',when:'',what:'',where:'',descriptions:[]}
+  //       ]}
+  data(){
+    return {sections:[
+      {sectionTitle:'Education',items:[
+        {title:'Tokushima University',when:'April 2018 - March 2020',what:'Master of Science in Electrical Engineering',where:'Tokushima, Japan'
+        ,descriptions:['GPA:3.93 / 5.0','Coursework：Applied Image Processing,Spoken Language Processing,Human Sensing']},
+
+        {title:'China Jiliang University College of Modern Science and Technology ',when:'September 2013 - June 2017',what:'Major: Automation,Bachelor of Science in Engineering',where:'Hangzhou, China'
+        ,descriptions:['GPA:2.80 / 5.0','The Third Prize Scholarship（2015）'
+                      ,'Coursework:The Theory and Application of Microcomputer, Industrial Control System Course Design，Object Oriented Programming']}
+        ]},
+
+      {sectionTitle:'Project Experience',items:[
+        {title:'Master\'s study ',when:'Apr 2018 - Present',what:'Japanese speech recognition system',where:''
+        ,descriptions:['Machine learning is used, the framework uses Chainer.'
+                        ,'Unlike the method of processing after inputting all the mainstream audio, it aims at a real-time processing system.'
+                        ,'uni-LSTM network using CTC and local attention mechanism']},
+
+       {title:'Graduation Project',when:'Sepetember 2016 - May 2017',what:'Parking lot management system',where:''
+        ,descriptions:['Created a license plate recognition program using python and OpenCV.'
+                        ,'Send commands to the MCU via WIFI to control the steering gear (garage door).'
+                        ,'Each sensor, identification program and garage door are connected to the server via WIFI, so no wiring is required'
+                        ,'can check parking space information from smartphone']},
+
+        {title:'The 1st robot competition in Zhejiang Province',when:'Sepetember 2015 - May 2016',what:'programming',where:''
+        ,descriptions:['Sensor mounting and adjustment'
+                        ,'Program the microcontroller (C language)'
+                        ,'Participated in the Travel Robot Project and won the third prize']}
+        
+ 
+        
+        ]},
+      
+      {sectionTitle:'SKILLS, CERTIFICATIONS & OTHERS',items:[
+        {title:'',when:'',what:'',where:''
+        ,descriptions:['Tools: Git, Sublime Text, VS Code','Languages: English(TOEFL 77/120, TOEIC L&R 865/990), Japanese(N1 129/180)','Interests: basketball, soccer, PC games, American TV shows, anime']}
+        ]},
+
+      {sectionTitle:'SOCIETY EXPERIENCE',items:[
+        {title:'Basketball Club',when:'Sepetember 2013 - Sepetember 2015',what:'',where:'',descriptions:['Organized basketball games in the university and served as a referee.']}
+        ]}
+
+      ]
+    }
   }
 }
 </script>
 
 <style>
-#app {
+a:visited{
+  color:black;
+}
+#header div{
+  padding-top: 3px;
+}
+#main {
+  flex-direction: column;
+
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-size: 13px;
+
+  
+  padding:4%;
+  
+  /* box-shadow: 0px 0px 5px black; */
+  
+  /* color: #2c3e50; */
+  /* margin-top: 60px; */
 }
+#A4paper{
+  width:210mm;
+  height:297mm;
+  margin:0 auto;
+  background-color: white;
+}
+#back{
+  margin:-8px ;
+  background-color: rgb(247, 247, 247);
+
+}
+
 </style>
