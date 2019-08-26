@@ -56,9 +56,14 @@ export default {
         ,descriptions:['E2E Streaming Speech Recognition Using CTC and Attention.'
                         ,'Unlike the main stream in speech recognition using bi-directional network, we only used uni-direction network which make the model streamable.'
                         ,'Choose maxpooling as downsample method to reduce output time steps and make the process faster, the process time is 0.03s per sentence at training, even with large vocabulary size of 22,642.'
-                        ,'Made the model have ability to get a small region of bi-directional context information with Local Attention and improve WER 1.6% at high downsample rate situation, and still remain streamable.'
+                        ,'Made the model have ability to get a small region of bi-directional context information by using Local Attention and improve word error rate (WER) 1.6% at high downsample rate situation, and still remain streamable.'
                         ,'Introduced Confidence Penalty into our model to regularize over-confidence output and reduced WER by a furthur 1.5%.'
                         ]},
+      {title:'Machine Learning Project',when:'Sepetember 2018 - Present',what:'Web Application',where:''
+        ,descriptions:['Built flask server to host several ML project I made during learning.'
+                        ,'Image recognition, text generation and recently the speech recognition model I\'ve been working on.'
+                        ,'Use websocket to stream data form web page to server in speech recognition application.']},
+
 
        {title:'Graduation Project',when:'Sepetember 2016 - May 2017',what:'Parking lot management system',where:''
         ,descriptions:['Created a license plate recognition program using python and OpenCV.'
@@ -75,12 +80,12 @@ export default {
         
         ]},
       
-      {sectionTitle:'SKILLS, CERTIFICATIONS & OTHERS',items:[
+      {sectionTitle:'TOOLS, CERTIFICATIONS & OTHERS',items:[
         {title:'',when:'',what:'',where:''
         ,descriptions:['Tools: Git, Sublime Text, VS Code'
                       ,'Languages: English(TOEFL 77/120, TOEIC L&R 865/990), Japanese(N1 129/180)'
-                      ,'Interests: basketball, soccer, PC games, American TV shows, anime'
-                      ,'SOCIETY EXPERIENCE:Organized basketball games in the university and served as a referee.']}
+                      ,'Interests: Basketball, Soccer, PC games, American TV shows, Anime'
+                      ,'Society Experience: Organized basketball games in the university and served as a referee.']}
         ]}
 
       // {sectionTitle:'SOCIETY EXPERIENCE',items:[

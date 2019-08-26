@@ -35,6 +35,7 @@ ul {
 li {
   list-style-position:outside;
   margin: 5px 15px;
+  margin-top:0px;
   /* min-height: 20px; */
 }
 /* li::before{
