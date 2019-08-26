@@ -33,9 +33,9 @@ ul {
   padding: 0;
 }
 li {
-  list-style-position:inside;
-  margin: 1px 10px;
-  height: 20px;
+  list-style-position:outside;
+  margin: 5px 15px;
+  /* min-height: 20px; */
 }
 /* li::before{
   content:".";
