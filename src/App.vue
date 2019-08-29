@@ -43,10 +43,10 @@ export default {
   data(){
     return {sections:[
       {sectionTitle:'Education',items:[
-        {title:'Tokushima University',when:'April 2018 - March 2020',what:'Master of Science in Electrical Engineering',where:'Tokushima, Japan'
+        {title:'Tokushima University',when:'April 2018 - March 2020',what:'Major:Systems Innovation Engineering, Master of Engineering',where:'Tokushima, Japan'
         ,descriptions:['GPA:3.93 / 5.0','Coursework：Applied Image Processing,Spoken Language Processing,Human Sensing']},
 
-        {title:'China Jiliang University College of Modern Science and Technology ',when:'September 2013 - June 2017',what:'Major: Automation, Bachelor of Science in Engineering',where:'Hangzhou, China'
+        {title:'China Jiliang University College of Modern Science and Technology ',when:'September 2013 - June 2017',what:'Major: Automation, Bachelor of Engineering',where:'Hangzhou, China'
         ,descriptions:['GPA:2.80 / 5.0','The Third Prize Scholarship (2015)'
                       ,'Coursework:The Theory and Application of Microcomputer, Industrial Control System Course Design，Object Oriented Programming']}
         ]},
@@ -55,8 +55,8 @@ export default {
         {title:'Master\'s study ',when:'Apr 2018 - Present',what:'Japanese speech recognition',where:''
         ,descriptions:['E2E Streaming Speech Recognition Using CTC and Attention.'
                         ,'Unlike the main stream in speech recognition using bi-directional network, we only used uni-direction network which make the model streamable.'
-                        ,'Choose maxpooling as downsample method to reduce output time steps and make the process faster, the process time is 0.03s per sentence at training, even with large vocabulary size of 22,642.'
-                        ,'Made the model have ability to get a small region of bi-directional context information by using Local Attention and improve word error rate (WER) 1.6% at high downsample rate situation, and still remain streamable.'
+                        ,'Choose maxpooling as downsample method to reduce output time steps and make training faster, the training speed is 0.03s per sentence at training, even with large vocabulary size of 22,642.'
+                        ,'Make the model have ability to get a small region of bi-directional context information by using Local Attention and improve word error rate (WER) 1.6% at high downsample rate situation, and still remain streamable.'
                         ,'Introduced Confidence Penalty into our model to regularize over-confidence output and reduced WER by a furthur 1.5%.'
                         ]},
       {title:'Machine Learning Project',when:'Sepetember 2018 - Present',what:'Web Application',where:''
@@ -69,7 +69,7 @@ export default {
         ,descriptions:['Created a license plate recognition program using python and OpenCV.'
                         ,'Built a server to manage all the sensors, recognition program and door control status.'
                         ,'All the parts are connected to the server by WIFI, so no wiring is required.'
-                        ,'Built a smartphone App that can check the real-time empty parking space information.']},
+                        ,'Built a smartphone App so that can check the real-time empty space information.']},
 
         {title:'The 1st robot competition in Zhejiang Province',when:'Sepetember 2015 - May 2016',what:'Line Tracker Robot',where:''
         ,descriptions:['Select, mount and adjustment the sensors.'
@@ -115,6 +115,7 @@ a:visited{
 
   
   padding:4%;
+  padding-top: 20px;
   
   /* box-shadow: 0px 0px 5px black; */
   
