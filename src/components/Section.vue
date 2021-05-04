@@ -1,36 +1,40 @@
 <template>
   <div>
-    <div class='title'>{{section.sectionTitle}}</div>
+    <div class="title">{{ section.sectionTitle }}</div>
     <!-- <div>{{section.items}}</div> -->
-    <itemBlock class="block" v-for="item in section.items" :key='item.title' :item='item'/>
-    
+    <itemBlock
+      class="block"
+      v-for="item in section.items"
+      :key="item.title"
+      :item="item"
+    />
   </div>
 </template>
 
 <script>
-import itemBlock from './itemBlock.vue'
+import itemBlock from "./itemBlock.vue";
 export default {
-  name: 'Section',
+  name: "Section",
   props: {
-    section: Object
+    section: Object,
   },
   components: {
-    itemBlock
+    itemBlock,
   },
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.block{
+.block {
   padding: 0px;
 }
-.title{
+.title {
   padding-top: 3px;
   padding-bottom: 3px;
   border-bottom: 1px solid rgb(199, 199, 199);
   margin-bottom: 8px;
-  font-weight:bold;
-  font-size:large;
+  font-weight: bold;
+  font-size: large;
 }
 </style>

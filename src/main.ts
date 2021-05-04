@@ -1,4 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import { createI18n } from "vue-i18n";
+import App from "./App.vue";
+import { i18n } from "./i18n";
 
-createApp(App).mount('#app')
+const app = createApp(App);
+app.use(i18n);
+app.mount("#app");
