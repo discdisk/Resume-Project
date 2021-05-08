@@ -13,6 +13,7 @@ const messages = {
       github: "Github",
       programmingLanguages: "Programming Languages",
       framework: "Framework",
+      intention: "求职意向：全栈工程师",
     },
     sectionTitle: {
       education: "Education",
@@ -32,6 +33,7 @@ const messages = {
       github: "Github",
       programmingLanguages: "编程语言",
       framework: "框架",
+      intention: "求职意向：全栈工程师",
     },
     sectionTitle: {
       education: "学历",

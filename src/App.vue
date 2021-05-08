@@ -5,31 +5,25 @@
         <div>
           <div style="font-size: 30px; font-weight: bold; position: relative">
             {{ $t("profile.name") }}
-            <button id="lang" @click="changeLocale()">lang</button>
+            <button id="lang" @click="changeLocale()">
+              <span :class="{ bold: !langEn }">zh</span>/<span
+                :class="{ bold: langEn }"
+                >en</span
+              >
+            </button>
           </div>
           <section id="header">
-            <div class="header-part">
-              <div>{{ $t("profile.email") }}</div>
-              <div>{{ $t("profile.phone") }}</div>
-              <div>{{ $t("profile.address") }}</div>
-            </div>
-
             <div class="header-part text-right">
-              <div>
+              <span>{{ $t("profile.intention") }}</span> &nbsp;
+              <span>{{ $t("profile.email") }}</span>
+              <!-- <span>
                 {{ $t("profile.github") }}:
                 <a
                   style="text-decoration: none"
                   href="https://github.com/discdisk"
                   >https://github.com/discdisk</a
                 >
-              </div>
-              <div>
-                {{ $t("profile.programmingLanguages") }}: Python, Javascript, C,
-                SQL
-              </div>
-              <div>
-                {{ $t("profile.framework") }}: Flask, vue.js, Chainer, Keras
-              </div>
+              </span> -->
             </div>
           </section>
         </div>
@@ -44,18 +38,22 @@
   </div>
 </template>
 
-<script>
-import Section from "./components/Section.vue";
+<script lang="ts">
+import { defineComponent } from "vue";
 import { enSections } from "./data/en";
 import { zhSections } from "./data/zh";
-export default {
-  name: "app",
+import Section from "./components/Section.vue";
+import HelloWorld from "./components/HelloWorld.vue";
+
+export default defineComponent({
+  name: "App",
   components: {
+    HelloWorld,
     Section,
   },
   data() {
     return {
-      sections: enSections,
+      sections: zhSections,
       langEn: true,
     };
   },
@@ -67,7 +65,7 @@ export default {
       this.sections = this.langEn ? enSections : zhSections;
     },
   },
-};
+});
 </script>
 
 <style>
@@ -83,15 +81,18 @@ a:visited {
 .text-right {
   text-align: right;
 }
+.bold {
+  font-weight: bold;
+}
 #main {
   flex-direction: column;
 
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 13px;
+  font-size: 15px;
 
-  padding: 4%;
+  padding: 8%;
   padding-top: 20px;
 }
 #A4paper {

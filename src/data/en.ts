@@ -1,4 +1,5 @@
-export const enSections = [
+import { Section } from "../model/section.model";
+export const enSections: Section[] = [
   {
     sectionTitle: "Education",
     items: [

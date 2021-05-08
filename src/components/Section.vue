@@ -11,17 +11,19 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { Section } from "../model/section.model";
 import itemBlock from "./itemBlock.vue";
-export default {
+import { defineComponent, PropType } from "vue";
+export default defineComponent({
   name: "Section",
   props: {
-    section: Object,
+    section: { type: Object as PropType<Section>, required:true },
   },
   components: {
     itemBlock,
   },
-};
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
