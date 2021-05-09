@@ -5,25 +5,19 @@
         <div>
           <div style="font-size: 30px; font-weight: bold; position: relative">
             {{ $t("profile.name") }}
-            <button id="lang" @click="changeLocale()">
+            <!-- <button id="lang" @click="changeLocale()">
               <span :class="{ bold: !langEn }">zh</span>/<span
                 :class="{ bold: langEn }"
                 >en</span
               >
-            </button>
+            </button> -->
           </div>
+
           <section id="header">
             <div class="header-part text-right">
-              <span>{{ $t("profile.intention") }}</span> &nbsp;
+              <span>{{ $t("profile.age") }}</span> &nbsp;
+              <span>{{ $t("profile.intention") }}</span> &nbsp; <br />
               <span>{{ $t("profile.email") }}</span>
-              <!-- <span>
-                {{ $t("profile.github") }}:
-                <a
-                  style="text-decoration: none"
-                  href="https://github.com/discdisk"
-                  >https://github.com/discdisk</a
-                >
-              </span> -->
             </div>
           </section>
         </div>

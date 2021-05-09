@@ -7,6 +7,7 @@ const messages = {
     },
     profile: {
       name: "CHEN JIAHAO",
+      age: "Age: 26",
       email: "{'Email: chenjiahao0501@gmail.com'}",
       phone: "Phone: 080-4475-0266",
       address: "Address: Chiba",
@@ -27,6 +28,7 @@ const messages = {
     },
     profile: {
       name: "陈家浩",
+      age: "年龄：26",
       email: "{'邮箱: chenjiahao0501@gmail.com'}",
       phone: "电话: 151-6821-1261",
       address: "地址: 杭州",
